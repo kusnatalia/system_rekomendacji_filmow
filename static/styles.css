@@ -1,0 +1,37 @@
+body {
+    background-color: #68BBE3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Calibri', sans-serif;
+}
+
+/* Zmiany dla search bara */
+form .search-input {
+    width: 900px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+form .search-button {
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px; /* Dostosuj odstęp od search bara */
+}

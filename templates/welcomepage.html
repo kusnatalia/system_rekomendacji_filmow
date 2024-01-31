@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoja Aplikacja</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url("{{ url_for('static', filename='cinema3.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .center-container {
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #68BBE3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-container">
+        <h1>Are you looking for movies you may like? </h1>
+        <a href="{{ url_for('index') }}"><button>Check our website</button></a>
+    </div>
+</body>
+</html>

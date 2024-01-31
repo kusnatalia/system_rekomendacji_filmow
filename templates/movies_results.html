@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyniki wyszukiwania</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #68BBE3;
+        }
+
+        h2, p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Movie: {{query_name}} </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Wikidata link</th>
+                <th>Duration (minutes) </th>
+                <th>Genre</th>
+                <th>Cast</th>
+                <th>Movie Director</th>
+                <th>Premiere</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{query_wikidata}}</td>
+                <td>{{query_duration}}</td>
+                <td>{{query_genres}}</td>
+                <td>{{query_cast}}</td>
+                <td>{{query_directors}}</td>
+                <td>{{query_date}}</td>
+                <td>{{query_rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Plot:</h2>
+
+    <table>
+        <tr>
+            <td>{{ query_opis_wikipedia }}</td>
+        </tr>
+    </table>
+
+
+    <h2> You may also like this movie: {{result_name}} </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Wikidata link</th>
+                <th>Duration (minutes) </th>
+                <th>Genre</th>
+                <th>Cast</th>
+                <th>Director</th>
+                <th>Premiere</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{result_wikidata}}</td>
+                <td>{{result_duration}}</td>
+                <td>{{result_genres}}</td>
+                <td>{{result_cast}}</td>
+                <td>{{result_directors}}</td>
+                <td>{{result_date}}</td>
+                <td>{{result_rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Plot:</h2>
+
+    <table>
+        <tr>
+            <td>{{ result_opis_wikipedia }}</td>
+        </tr>
+    </table>
+<h2> Jaccard_distance: {{jaccard_distance}} </h2>
+</body>
+</html>
+
+
